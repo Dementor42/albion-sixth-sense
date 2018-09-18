@@ -80,7 +80,7 @@ function main()
 
 		// Alert the user if the number of players in the unsafe area changed.
 		var new_num_players = getNumPlayersImage();
-		if (new_num_players.pixelEqualityTo(old_num_players) < 0.98)
+		if (new_num_players.pixelEquality(old_num_players) < 0.98)
 		{
 			Helper.playWavSound(alert_sound_file);
 			Helper.log("The number of hostile players changed!");
